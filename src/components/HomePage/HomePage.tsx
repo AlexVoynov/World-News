@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { API_KEY } from "../../helpers/api";
-import { Typography, List } from "@mui/material";
+import { Typography, List, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 const HomePage = () => {
   const [todaysArticles, setTodaysArticles] = useState([]);
 
@@ -33,7 +34,6 @@ const HomePage = () => {
   // 1. request zrobiony axios.get
   // 2. then w ktorym dostepny jest obiekt ktory jest mieszanka obiektu res i faktycznych danych
 
-
   useEffect(() => {
     axios
       .get(
@@ -55,6 +55,11 @@ const HomePage = () => {
         Today's hottest news:
       </Typography>
       <List sx={{ width: "100%", alignContent: "center" }}></List>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Button variant="contained" sx={{ display: "block", mx: "auto" }}>
+          Pusty URL
+        </Button>
+      </Link>
     </>
   );
 };

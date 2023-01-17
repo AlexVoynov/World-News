@@ -2,11 +2,13 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/HomePage/HomePage";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 function App() {
   const [avatarClicked, setAvatarClicked] = useState<boolean>(false);
   return (
     <div className="App">
       <BrowserRouter>
+        <RegisterForm />
         {/* STATIC */}
         <Navbar setAvatarClicked={setAvatarClicked} />
         {/* STATIC */}
@@ -24,10 +26,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
 
 // 3. JSX:
 // - wszystko ma być obwinięte w komponent ListItem (MUI)

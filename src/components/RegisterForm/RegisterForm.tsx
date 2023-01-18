@@ -70,4 +70,4 @@ const RegisterForm = () => {
 
 export default RegisterForm;
 
-// register("password", { required: true }) => [atrybut, atrybut, atrybut] => ... => atrybut atrybut atrybut
+

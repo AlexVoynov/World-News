@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <RegisterForm />
         {/* STATIC */}
         <Navbar setAvatarClicked={setAvatarClicked} />
         {/* STATIC */}
@@ -16,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<h1>To jest pusty url</h1>} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/register" element={<RegisterForm />} />
         </Routes>
         {/* DYNAMIC */}
         {/* STATIC */}

@@ -13,11 +13,12 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 interface NavbarProps {
   setAvatarClicked: (val: boolean | ((val: boolean) => boolean)) => void; // chce podac albo boolean, albo funkcję która z kolei będzie przyjmować boolean i zwracać boolean
+  loggedIn: boolean;
 }
 
 const pages = ["Home", "Search"];
 
-const Navbar = ({ setAvatarClicked }: NavbarProps) => {
+const Navbar = ({ setAvatarClicked, loggedIn }: NavbarProps) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -125,9 +126,16 @@ const Navbar = ({ setAvatarClicked }: NavbarProps) => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Link to="/login" style={{ textDecoration: "none" }}>
-              <IconButton sx={{ p: 0 }} onClick={toggleAvatarClicked}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
+              {/* turnary operator, renderowanie warunkowe typ I */}
+              {loggedIn ? (
+                <IconButton sx={{ p: 0 }} onClick={toggleAvatarClicked}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              ) : (
+                <Button variant="contained">Log in</Button>
+              )}
+              {/* operator &&, renderowanie warunkowe typ II */}
+              {/* {loggedIn && <span>Hello!</span>} */}
             </Link>
           </Box>
         </Toolbar>

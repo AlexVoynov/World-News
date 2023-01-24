@@ -1,10 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { TextField, Button } from "@mui/material";
-const SearchForm = () => {
-  const { register, handleSubmit } = useForm();
 
-  const updateKeyword = () => {};
+interface SearchFormProps {
+  setKeyword: (value: string) => void;
+}
+
+interface SearchFormValues {
+  keyword: string;
+}
+
+const SearchForm = ({ setKeyword }: SearchFormProps) => {
+  const { register, handleSubmit } = useForm<SearchFormValues>();
+
+  const updateKeyword = ({ keyword }: SearchFormValues) => {
+    setKeyword(keyword);
+  };
 
   return (
     <form

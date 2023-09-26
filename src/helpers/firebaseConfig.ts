@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBVevwbEt1yrduPaWmX71bvFCNxxlozaUg",
-  authDomain: "zdfronpol18-sdanews.firebaseapp.com",
-  projectId: "zdfronpol18-sdanews",
-  storageBucket: "zdfronpol18-sdanews.appspot.com",
-  messagingSenderId: "231702909149",
-  appId: "1:231702909149:web:fab96425243e42c6308b34",
+  apiKey: "AIzaSyDdFQxSTyTHQIJvj827b8jtKRov0qyiwHQ",
+  authDomain: "react-projekt-7f348.firebaseapp.com",
+  projectId: "react-projekt-7f348",
+  storageBucket: "react-projekt-7f348.appspot.com",
+  messagingSenderId: "278789951012",
+  appId: "1:278789951012:web:ab0e10fefdf016d88d52b1"
 };
 
 export const app = initializeApp(firebaseConfig);

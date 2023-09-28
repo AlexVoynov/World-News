@@ -36,6 +36,7 @@ function App() {
         {/* STATIC */}
         {/* DYNAMIC */}
         <Routes>
+          <Route path="/World-News/" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginPage />} />

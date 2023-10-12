@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/World-News/static/js/main.ec9d0f2a.js",
+    "static/js/787.ea2731db.chunk.js": "/World-News/static/js/787.ea2731db.chunk.js",
+    "index.html": "/World-News/index.html",
+    "main.ec9d0f2a.js.map": "/World-News/static/js/main.ec9d0f2a.js.map",
+    "787.ea2731db.chunk.js.map": "/World-News/static/js/787.ea2731db.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ec9d0f2a.js"
+  ]
+}

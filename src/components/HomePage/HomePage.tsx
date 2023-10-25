@@ -50,7 +50,7 @@ const HomePage = () => {
 
     axios.request({
       method: 'GET',
-      url: 'https://rawg-video-games-database.p.rapidapi.com/games/%7Bgame_pk%7D',
+      url: 'https://rawg-video-games-database.p.rapidapi.com/games/%7Bgame_pk%7D?key=7bf2321abec4479bbeed4ef87c23e892',
       headers: {
         'X-RapidAPI-Key': '3d7ce34f87msh7bc525e1131b05dp131512jsn8d8b83da7913',
         'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com'

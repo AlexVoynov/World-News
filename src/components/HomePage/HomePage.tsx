@@ -36,17 +36,29 @@ const HomePage = () => {
   // 2. then w ktorym dostepny jest obiekt ktory jest mieszanka obiektu res i faktycznych danych
 
   useEffect(() => {
-    axios
-      .get(
-        `https://newsapi.org/v2/everything?q=world&language=en&sortBy=popularity&from=${year}-${
-          month < 10 ? `0${month}` : month
-        }-${day - 1}&apiKey=${API_KEY}`
-      )
-      .then((data) => {
+    // axios
+    //   .get(
+    //     `https://newsapi.org/v2/everything?q=world&language=en&sortBy=popularity&from=${year}-${
+    //       month < 10 ? `0${month}` : month
+    //     }-${day - 1}&apiKey=${API_KEY}`
+    //   )
+    //   .then((data) => {
+    //     console.log(data);
+    //     console.log(data.data.articles);
+    //     setTodaysArticles(data.data.articles);
+    //   });
+
+    axios.request({
+      method: 'GET',
+      url: 'https://rawg-video-games-database.p.rapidapi.com/games/%7Bgame_pk%7D',
+      headers: {
+        'X-RapidAPI-Key': '3d7ce34f87msh7bc525e1131b05dp131512jsn8d8b83da7913',
+        'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com'
+      }
+    }).then((data) => {
         console.log(data);
-        console.log(data.data.articles);
-        setTodaysArticles(data.data.articles);
-      });
+    });
+    
   }, []);
   // FETCH + USEEFFECT TO NIE JEST NAJLEPSZY SPOSÓB NA KOMUNIKACJE Z API W REACTCIE, ALTERNATYEWA: REACT QUERY, TEN SPOSÓB JEST MIMO WSZYSTKO OK
   const typographyStyles = { fontSize: "2rem", mt: ".8rem" };
